@@ -33,16 +33,27 @@ background-image: url(https://images.unsplash.com/photo-1621083970864-83e46e9889
     max-width: 360px;
     margin: 0 auto 100px;
     padding: 45px;
-    text-align: center;
-    background-color:gray
+    text-align: left;
+    background-color:#CCD4DD 
 
 }
-.form input{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.inputs{
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     outline: 1;
-    width: 100%;
+    /* width: 50%; */
     border: 0;
-    margin:  0 0 15px;
+    /* margin:  0 0 15px; */
+    /* box-sizing: border-box; */
+    /* font-size: 14px */
+
+    width: 250px;
+    height: 42px;
+    border: 2px solid rgb(191, 178, 204);
+    margin:  0 0 15px; 
+    border-radius: 2px;
+    outline: none;
     box-sizing: border-box;
-    font-size: 14px;
+    border-radius: 10px 10px 10px 10px;
+    text-align: centre;
+    box-shadow: 2px 3px 7px rgb(119, 114, 114);
 }

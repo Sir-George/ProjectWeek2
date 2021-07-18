@@ -1,50 +1,68 @@
-const form = document.querySelector('.form');
-const dd = document.querySelector('#day');
-const mm = document.querySelector('#month');
-const yr = document.querySelector('#year');
-const gender = document.querySelector('#gender');
-
-console.log(dd);
-
-//form.addEventListener('submit', (e);
-
-console.log("2");
-
-//Responsive Form
-
-
-// Validate the day,month and year
-function validateData (e) 
+function getInputVals()
 {
     
+    const dd = document.getElementById("day").value;
+    const mm = document.getElementById("month").value;
+    const yr = document.getElementById("year").value;
+
+    //get the value of the gender radio buttons
+   const gender= document.querySelector('input[name="gender"]:checked').value;
+       // const gender= document.getElementById("gender").value; 
+    
+    
+
+console.log( +dd+ "/"+mm+"/"+yr+ " "+ gender);
+
+
+//Check if all input fields have been entered
+if (dd== "") {
+    alert("The day field cannot be empty");
+    return false;
+}
+if (mm=="") {
+    alert("The month field cannot be empty");
+    return false;
+}
+if (yr== "") {
+    alert("The Year field cannot be empty");
+    return false;
+}
+if  (gender== "") {
+    alert("The gender field cannot be empty");
+    return false;
+}
+
+//Validate the inputs
 if(dd<=0 || dd>31)
 {
-  var  err="Incorrect date";
+  var  err="The day of the month " + dd + " is incorrect";
 }
-else if (mm<=o || mm>12) 
+else if (mm<= 0|| mm>12) 
 {
-   var err="Incorrect month";
+   var err="The month number " + mm + " is incorrect";
 }
 else if( yr>2021)
 {
-    var err="Date in the future";
+    var err="The year you entered " + yr +" is in the future!";
 }
 else
 {
   var err= "";
 }
- if (err!==null) 
+
+//Display the error if there is one
+ if (err!= "") 
  {
      alert(err);
+     console.log(err);
+     return
  }
 
-}
 
-console.log("Validation run ok");
-
-//Get the day of the week
+//If here, there is a low chance we might have an error.
 
 
+//Get the day of the week based on the input values that we have
 let y = yr.toString();
 let cc = y.slice(0,2);
 let yy = y.slice(2,4);
@@ -53,18 +71,17 @@ let yy = y.slice(2,4);
 
 let d= ( ( (cc/4) -2*cc-1) + ((5*yy/4) ) + ((26*(mm+1)/10)) + dd ) % 7
 
-
+//The day might be returned as a floating point value so we need to truncate it.
 let day = Math.trunc(d);
 
-//document.getElementById("demo").innerHTML = day;
-
+console.log(day)
 
 
 
 //Get The Gender Name based on the day value
 
     //Male names will go here 
-    if (gender= "male") 
+    if (gender== "male") 
     {
     switch (day) {
         case 0:
@@ -89,9 +106,12 @@ let day = Math.trunc(d);
         dayName="Kwame"
             break;
     }
+    console.log(dayName)
     }  
+
+  
     //Gender is female and the names will go here 
-    else
+   else
     {
         switch (day) {
             case 0:
@@ -118,4 +138,10 @@ let day = Math.trunc(d);
 
     }
 }
+console.log(dayName);
 
+var genderName= "Your Gender Name is " + dayName
+
+// Display the Name
+document.getElementById("output").innerHTML= genderName
+}

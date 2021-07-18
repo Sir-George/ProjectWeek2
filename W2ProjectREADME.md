@@ -40,8 +40,9 @@ ____
 ___
 
 ## **Behaviour Driven Development (BDD)**
-Currently i cannot come to a definite conclusion on how it should behave as i am currently working on the form inputs and working on the errors
-but by Sunday hopefully i shall have be well aware
+The software is working as expected as one enters their day,month and year of birth in form month and based on the day they were born they are given their Akan name.
+The Console is also used to check its functionality.And for any input that is not applicable eg. negatives day exceeding 31, month exceeding 12 and year exceeding 2021 an alert message is issued.
+NB:It only accepts input in form of numbers.
 
 
 ## **Technologies Used**
