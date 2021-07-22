@@ -1,3 +1,4 @@
+//Receive Inputs
 function getInputVals()
 {
     
@@ -139,8 +140,34 @@ console.log(day)
     }
 }
 console.log(dayName);
+switch (day) {
+    case 0:
+    day="Sunday"; 
+        break;
+    case 1:
+    day="Monday"; 
+         break;    
+    case 2:
+     day="Tuesday";
+        break;
+    case 3:
+     day="Wednesday";
+        break; 
+    case 4:
+    day="Thursday";
+        break;
+    case 5:
+    day ="Friday";
+        break
+    case 6:
+    day="Sunday"
+        break;
+}
+console.log(day);
 
-var genderName= "Your Gender Name is " + dayName
+var genderName= "Your Gender Name is " + dayName + " and your Birthday falls on a " + day
+
+
 
 // Display the Name
 document.getElementById("output").innerHTML= genderName

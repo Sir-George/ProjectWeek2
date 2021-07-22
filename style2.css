@@ -30,8 +30,8 @@ background-image: url(https://images.unsplash.com/photo-1621083970864-83e46e9889
 .form{
     position: relative;
     z-index: 1;
-    max-width: 360px;
-    margin: 0 auto 100px;
+    max-width: 500px;
+    margin: 0 auto 300px;
     padding: 45px;
     text-align: left;
     background-color:#CCD4DD 
